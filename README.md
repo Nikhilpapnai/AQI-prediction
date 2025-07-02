@@ -1,37 +1,31 @@
-# Machine Learning Models for AQI Prediction
+# Comparison of Machine Learning Models for AQI Prediction
 
-## 🎯 Objective
+## Objective
 
-This project focuses on evaluating and comparing multiple machine learning models to determine the most accurate method for predicting the **Air Quality Index (AQI)** using environmental data.
+This project focuses on evaluating and comparing multiple machine learning models to determine the most accurate method for predicting the Air Quality Index (AQI) using environmental data.
 
----
-
-## 🧠 Models Implemented
+## Models Implemented
 
 The following regression algorithms were applied and tested:
 
-- **Multiple Linear Regression (MLR)**
-- **Polynomial Regression**
-- **Decision Tree Regressor**
-- **Random Forest Regressor**
-- **Support Vector Regressor (SVR)**
+- Multiple Linear Regression (MLR)
+- Polynomial Regression
+- Decision Tree Regressor
+- Random Forest Regressor
+- Support Vector Regressor (SVR)
 
-> All models were trained using Python libraries including NumPy, Pandas, and Scikit-learn, within the Spyder IDE (Anaconda distribution).
+All models were trained using Python libraries including NumPy, Pandas, and Scikit-learn, within the Spyder IDE (Anaconda distribution).
 
----
-
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 
 To assess and compare model performance, the following error metrics were used:
 
-- **R² Score** (Coefficient of Determination)
-- **RMSE** (Root Mean Squared Error)
-- **MAE** (Mean Absolute Error)
-- **RMSLE** (Root Mean Squared Logarithmic Error)
+- R² Score (Coefficient of Determination)
+- RMSE (Root Mean Squared Error)
+- MAE (Mean Absolute Error)
+- RMSLE (Root Mean Squared Logarithmic Error)
 
----
-
-## 📑 Dataset Source
+## Dataset Source
 
 The dataset was sourced from the [Open Government Data (OGD) Platform India](https://data.gov.in/resources/real-time-air-quality-index-various-locations), which provides hourly AQI readings across multiple Indian cities. Parameters include concentrations of pollutants like:
 
@@ -42,13 +36,11 @@ The dataset was sourced from the [Open Government Data (OGD) Platform India](htt
 - CO
 - O₃
 
----
+## Results
 
-## 📈 Results
+### Training Set Performance
 
-### 📌 Training Set Performance
-
-| Model           | R²     | RMSE   | MAE    | RMSLE  |
+| Model            | R²     | RMSE   | MAE    | RMSLE  |
 |------------------|--------|--------|--------|--------|
 | MLR              | 0.9965 | 5.9334 | 3.2952 | 0.0595 |
 | Decision Tree    | 1.0000 | 0.0000 | 0.0000 | 0.0000 |
@@ -56,11 +48,9 @@ The dataset was sourced from the [Open Government Data (OGD) Platform India](htt
 | SVR              | 0.9494 | 22.628 | 16.076 | 0.1423 |
 | Polynomial Reg.  | 1.0000 | 0.0900 | 0.0180 | 0.0012 |
 
----
+### Testing Set Performance
 
-### 📌 Testing Set Performance
-
-| Model           | R²     | RMSE     | MAE     | RMSLE  |
+| Model            | R²     | RMSE     | MAE     | RMSLE  |
 |------------------|--------|----------|---------|--------|
 | MLR              | 0.9965 | 5.4973   | 3.4796  | 0.0517 |
 | Decision Tree    | 0.9955 | 6.2370   | 2.3540  | 0.0563 |
@@ -68,27 +58,21 @@ The dataset was sourced from the [Open Government Data (OGD) Platform India](htt
 | SVR              | 0.9164 | 27.0025  | 19.0722 | 0.1686 |
 | Polynomial Reg.  | -4.1417| 211.8759 | 81.5855 | 0.4638 |
 
----
-
-## 📷 Sample Predictions
+## Sample Predictions
 
 Predicted vs Actual AQI values for various models:
 
-![MLR Prediction](imgs/mlr_p1.png)
-![Decision Tree Prediction](imgs/dtr_p1.png)
-![Random Forest Prediction](imgs/rfr_p1.png)
-![SVR Prediction](imgs/svr_p1.png)
+![MLR Prediction](imgs/mlr_p1.png)  
+![Decision Tree Prediction](imgs/dtr_p1.png)  
+![Random Forest Prediction](imgs/rfr_p1.png)  
+![SVR Prediction](imgs/svr_p1.png)  
 ![Polynomial Regression Prediction](imgs/pr_p1.png)
 
----
+## Conclusion
 
-## ✅ Conclusion
+Among all models tested, the Random Forest Regressor achieved the highest accuracy and lowest error on both training and testing datasets. It proved to be the most reliable model for AQI forecasting in this study.
 
-Among all models tested, the **Random Forest Regressor** achieved the highest accuracy and lowest error on both training and testing datasets. It proved to be the most reliable model for AQI forecasting in this study.
-
----
-
-## 📌 AQI Standards Reference
+## AQI Standards Reference
 
 Below is the AQI classification table as per CPCB guidelines:
 
